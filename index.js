@@ -24,20 +24,20 @@ passport.deserializeUser((user, done) => { done(null, user); });
 passport.use(new GoogleStrategy(GOOGLE_STRATEGY_DATA, handlers.handleStrategy));
 
 // MAIN ENDPOINTS
-app.get('/', handlers.handleMainpage);
-app.get('/dashboard', handlers.handleDashboard);
-
-// CREATE ENDPOINT
-app.get('/create', handlers.handleCreateView);
-app.post('/create', handlers.handleCreatePost);
+app.use('/', express.static('public'));
+app.get('/dashboard', (req, res) => res.send('very dashboard')); //remove?
 
 // AUTH ENDPOINTS
 app.get('/login', (req, res) => res.redirect('/auth/google'));
 app.get('/auth/google', passport.authenticate('google', { scope: GOOGLE_PERMISSION_SCOPES }));
 app.get('/auth/google/callback', passport.authenticate('google'), handlers.handleCallback);
 
+// CREATE ENDPOINT
+app.post('/create', handlers.handleCreatePost);
+
 // MEETING ENDPOINTS
 app.get('/meeting/:id', handlers.handleMeetingData);
+app.post('/meeting/:id/join', handlers.handleJoinEvent);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {

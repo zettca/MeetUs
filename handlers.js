@@ -43,7 +43,7 @@ function listUserCalendarEvents(userData, calId) {
   axios.get(`https://www.googleapis.com/calendar/v3/calendars/${calId}/events`,
     {
       params: {
-        timeMin: (new Date()).toISOString(),
+        timeMin: (new Date(Date.now())).toISOString(),
         timeMax: (new Date(Date.now() + TIME_MAX)).toISOString(),
       },
       headers: { 'Authorization': `Bearer ${userData.token}` }
@@ -81,27 +81,12 @@ module.exports = {
     console.log(req.query);
     res.redirect('/dashboard');
   },
-  handleMainpage: (req, res) => {
-    if (req.user) {
-      res.redirect('/dashboard');
-    } else {
-      res.send('serving homepage</br><a href="/login">Login</a>');
-    }
-  },
-  handleDashboard: (req, res) => {
-    res.send('sending dashboard page...');
-  },
-  handleCreateView: (req, res) => {
-    res.send('serving page creation...');
-  },
   handleCreatePost: (req, res) => {
     res.send('');
   },
-  handleLoginView: (req, res) => {
-    res.redirect('/auth/google');
-    //res.send('sending login page...');
-  },
   handleMeetingData: (req, res) => {
     res.send('hey')
+  },
+  handleJoinEvent: (req, res) => {
   }
 };
