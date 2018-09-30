@@ -10,8 +10,11 @@ body {
 nav {
   overflow: hidden;
   float: right;
-  height: 42px;
+  height: 48px;
   margin: 2rem;
+}
+
+nav img {
   border-radius: 50%;
 }
 
@@ -45,11 +48,24 @@ a {
   border-radius: 50%;
 }
 
-#createEvent {
+.button {
   font-size: 1.6rem;
   cursor: pointer;
   padding: 1rem;
   background-color: orange;
   border: 1px solid darkorange;
   border-radius: 8px;
+}
+
+input {
+  display: block;
+  margin-bottom: 20px;
+  border: 1px solid #999;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+input:focus {
+  border: 1px solid #ccc;
+  outline: none;
 }

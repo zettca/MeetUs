@@ -22,28 +22,12 @@
 <body>
   <nav>
     <a href="/login">
-      <img height=48 src="profile-blank.png" alt="profile">
+      <span>Login</span>
+      <img height=42 src="profile-blank.png" alt="profile">
     </a>
   </nav>
   <main>
-    <section>
-      <h1>Create an event:</h1>
-      <div>
-        <input size="30" type="text" name="title" id="title" placeholder="Event Title">
-        <input size="30" type="text" name="description" id="description" placeholder="Event Description">
-        <input size="30" type="number" name="duration" id="duration" placeholder="Duration (in minutes)">
-        <input size="30" type="text" name="tod" id="tod" list="timeofday" placeholder="Time of the day">
-        <datalist id="timeofday">
-          <option value="Morning">8:00 - 12:00</option>
-          <option value="Afternoon">12:00 - 18:00</option>
-          <option value="Evening">18:00 - 24:00</option>
-        </datalist>
-        <button id="submitForm" class="button" onclick="submite()">Create event!</button>
-      </div>
-    </section>
-    <section>
-      <div id="meetingURL"></div>
-    </section>
+    <p>meeting data...</p>
   </main>
   <script src="scripts.js"></script>
 </body>

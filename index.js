@@ -32,12 +32,14 @@ app.get('/login', (req, res) => res.redirect('/auth/google'));
 app.get('/auth/google', passport.authenticate('google', { scope: GOOGLE_PERMISSION_SCOPES }));
 app.get('/auth/google/callback', passport.authenticate('google'), handlers.handleCallback);
 
-// CREATE ENDPOINT
-app.post('/create', handlers.handleCreatePost);
+// EVENT MANAGMENT ENDPOINTS
+app.get('/create', handlers.createPost);
+app.post('/create', (req, res) => res.send({ 'err': 'use GET instead' }));
 
 // MEETING ENDPOINTS
 app.get('/meeting/:id', handlers.handleMeetingData);
 app.post('/meeting/:id/join', handlers.handleJoinEvent);
+app.post('/meeting/:id/end', handlers.handleEndEvent);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {

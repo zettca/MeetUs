@@ -1,3 +1,47 @@
 {
-  "events": []
+  "events": [
+    {
+      "id": "ku242huXvtTqjFajkqcZiR_123",
+      "opts": {
+        "title": "Dummy Event",
+        "description": "Welcome to my dummy event! <3",
+        "duration": 120,
+        "location": "Lisbon",
+        "tod": "evening"
+      },
+      "members": [
+        "corruption1337@gmail.com"
+      ]
+    },
+    {
+      "id": "bBDofzYCBH2pDZ63W3UwKV",
+      "opts": {
+        "title": "Sample",
+        "description": "Sample",
+        "duration": "60",
+        "tod": "Morning"
+      },
+      "members": []
+    },
+    {
+      "id": "s87Pymx1QMQeantgmhUfxr",
+      "opts": {
+        "title": "Dududu",
+        "description": "Dududu",
+        "duration": "90",
+        "tod": "Afternoon"
+      },
+      "members": []
+    },
+    {
+      "id": "xtYdsUuHNVqK2PskjfAMwZ",
+      "opts": {
+        "title": "Dadada",
+        "description": "Dadada",
+        "duration": "60",
+        "tod": "Evening"
+      },
+      "members": []
+    }
+  ]
 }
