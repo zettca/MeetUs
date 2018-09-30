@@ -1,0 +1,28 @@
+{
+  "name": "meetus",
+  "version": "1.0.0",
+  "description": "MeetUs calendar matching app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zettca/MeetUs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zettca/MeetUs/issues"
+  },
+  "homepage": "https://github.com/zettca/MeetUs#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "compression": "^1.7.3",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "lowdb": "^1.0.0",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^1.0.0"
+  }
+}
